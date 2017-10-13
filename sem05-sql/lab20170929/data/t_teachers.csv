@@ -1,0 +1,13 @@
+"B1";"Berger";"Alfred";1945.2.3;400.00;;
+"PI";"Pirkner";"Walter";1955.6.26;220.00;"B1";
+"AS";"Aschauer";"Anton";1961.8.9;180.00;"PI";
+"LN";"Lenau";"Nikolaus";1938.2.22;180.00;"HA";
+"AU";"Auwald";"Herbert";1946.9.7;150.00;"LN";
+"HA";"Hanke";"Gustav";1950.12.12;300.00;"B1";
+"BE";"Beringer";"Alfred";1961.7.15;220.00;"HA";
+"BI";"Bilek";"Hans";1932.3.3;280,00;"HA";
+"LI";"Lindner";"Kristine";1958.12.12;300.00;"HA";
+"MY";"Mayer";"Walter";1947.4.1;120.00;"LN";
+"PS";"Prei�l";"Johann";1956.7.5;82.00;"HA";
+"SG";"Siegel";"Heinz";;;;
+"WA";"Walter";"Hans";1949.11.11;115.00;"PI";
