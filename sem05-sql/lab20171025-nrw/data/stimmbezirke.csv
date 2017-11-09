@@ -1,0 +1,113 @@
+Name,Regionalwahlkreis,Art
+Eisenstadt,1A,Stadt
+Rust,1A,Stadt
+Eisenstadt-Umgebung,1A,Politischer Bezirk
+Mattersburg,1A,Politischer Bezirk
+Neusiedl am See,1A,Politischer Bezirk
+Güssing,1B,Politischer Bezirk
+Jennersdorf,1B,Politischer Bezirk
+Oberpullendorf,1B,Politischer Bezirk
+Oberwart,1B,Politischer Bezirk
+Klagenfurt,2A,Stadt
+Klagenfurt-Land,2A,Politischer Bezirk
+Villach,2B,Stadt
+Villach-Land,2B,Politischer Bezirk
+Feldkirchen,2C,Politischer Bezirk
+Hermagor,2C,Politischer Bezirk
+Spittal an der Drau,2C,Politischer Bezirk
+St. Veit an der Glan,2D,Politischer Bezirk
+Völkermarkt,2D,Politischer Bezirk
+Wolfsberg,2D,Politischer Bezirk
+Hollabrunn,3A,Verwaltungsbezirk
+Korneuburg,3A,Verwaltungsbezirk
+Mistelbach,3A,Verwaltungsbezirk
+Krems,3B,Stadt
+Gmünd,3B,Verwaltungsbezirk
+Horn,3B,Verwaltungsbezirk
+Krems,3B,Verwaltungsbezirk
+Waidhofen an der Thaya,3B,Verwaltungsbezirk
+Zwettl,3B,Verwaltungsbezirk
+Waidhofen an der Ybbs,3C,Stadt
+Amstetten,3C,Verwaltungsbezirk
+Melk,3C,Verwaltungsbezirk
+Scheibbs,3C,Verwaltungsbezirk
+Sankt Pölten,3D,Stadt
+Lilienfeld,3D,Verwaltungsbezirk
+Sankt Pölten,3D,Verwaltungsbezirk
+Tulln,3D,Verwaltungsbezirk
+Wiener Neustadt,3E,Stadt
+Neunkirchen,3E,Verwaltungsbezirk
+Wiener Neustadt,3E,Verwaltungsbezirk
+Baden,3F,Verwaltungsbezirk
+Mödling,3F,Verwaltungsbezirk
+Bruck an der Leitha,3G,Verwaltungsbezirk
+Gänserndorf,3G,Verwaltungsbezirk
+Linz,4A,Stadt
+Linz-Land,4A,Politischer Bezirk
+Braunau am Inn,4B,Politischer Bezirk
+Ried im Innkreis,4B,Politischer Bezirk
+Schärding,4B,Politischer Bezirk
+Wels,4C,Stadt
+Eferding,4C,Politischer Bezirk
+Grieskirchen,4C,Politischer Bezirk
+Vöcklabruck,4C,Politischer Bezirk
+Wels-Land,4C,Politischer Bezirk
+Steyr,4D,Stadt
+Gmunden,4D,Politischer Bezirk
+Kirchdorf an der Krems,4D,Politischer Bezirk
+Steyr-Land,4D,Politischer Bezirk
+Salzburg,5A,Stadt
+Hallein,5B,Politischer Bezirk
+Salzburg-Umgebung,5B,Politischer Bezirk
+St. Johann im Pongau,5C,Politischer Bezirk
+Tamsweg,5C,Politischer Bezirk
+Zell am See,5C,Politischer Bezirk
+Graz,6A,Stadt
+Graz-Umgebung,6A,Politischer Bezirk
+Hartberg-Fürstenfeld,6B,Politischer Bezirk
+Südoststeiermark,6B,Politischer Bezirk
+Weiz,6B,Politischer Bezirk
+Deutschlandsberg,6C,Politischer Bezirk
+Leibnitz,6C,Politischer Bezirk
+Voitsberg,6C,Politischer Bezirk
+Bruck-Mürzzuschlag,6D,Politischer Bezirk
+Leoben,6D,Politischer Bezirk
+Liezen,6D,Politischer Bezirk
+Murau,6D,Politischer Bezirk
+Murtal,6D,Politischer Bezirk
+Innsbruck,7A,Stadt
+Innsbruck-Land,7B,Politischer Bezirk
+Schwaz,7B,Politischer Bezirk
+Kitzbühel,7C,Politischer Bezirk
+Kufstein,7C,Politischer Bezirk
+Imst,7D,Politischer Bezirk
+Landeck,7D,Politischer Bezirk
+Reutte,7D,Politischer Bezirk
+Lienz,7E,Politischer Bezirk
+Bregenz,8A,Verwaltungsbezirk
+Dornbirn,8A,Verwaltungsbezirk
+Bludenz,8B,Verwaltungsbezirk
+Feldkirch,8B,Verwaltungsbezirk
+Landstraße,9A,Gemeindebezirk
+Wieden,9A,Gemeindebezirk
+Margareten,9A,Gemeindebezirk
+Innere Stadt,9B,Gemeindebezirk
+Mariahilf,9B,Gemeindebezirk
+Neubau,9B,Gemeindebezirk
+Josefstadt,9B,Gemeindebezirk
+Alsergrund,9B,Gemeindebezirk
+Leopoldstadt,9C,Gemeindebezirk
+Brigittenau,9C,Gemeindebezirk
+Favoriten,9D,Gemeindebezirk
+Simmering,9D,Gemeindebezirk
+Meidling,9D,Gemeindebezirk
+Hietzing,9E,Gemeindebezirk
+Penzing,9E,Gemeindebezirk
+Rudolfsheim-Fünfhaus,9E,Gemeindebezirk
+Liesing,9E,Gemeindebezirk
+Ottakring,9F,Gemeindebezirk
+Hernals,9F,Gemeindebezirk
+Währing,9F,Gemeindebezirk
+Döbling,9F,Gemeindebezirk
+Floridsdorf,9G,Gemeindebezirk
+Donaustadt,9G,Gemeindebezirk
