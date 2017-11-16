@@ -4,7 +4,7 @@ USE 20171025PejicKaiserNRW;
 
 CREATE TABLE s_stimmbezirke (
   s_name VARCHAR(30) PRIMARY KEY,
-  s_regionalwahlkreis VARCHAR(2),
+  s_r_regionalwahlkreis VARCHAR(2),
   s_art VARCHAR(20)
 ) ENGINE = InnoDB;
 
@@ -40,8 +40,8 @@ LOAD DATA LOCAL INFILE 'data/regionalwahlkreise.csv'
 CREATE TABLE p_parteien (
   p_partei VARCHAR(120),
   p_kurzbezeichnung VARCHAR(10),
-  p_landeswahlkreis INT,
-  PRIMARY KEY (p_kurzbezeichnung, p_landeswahlkreis)
+  p_l_landeswahlkreis INT,
+  PRIMARY KEY (p_kurzbezeichnung, p_l_landeswahlkreis)
 );
 
 LOAD DATA LOCAL INFILE 'data/parteien.csv'
@@ -51,7 +51,7 @@ LOAD DATA LOCAL INFILE 'data/parteien.csv'
     IGNORE 1 LINES;
 
 CREATE TABLE li_liste (
-  li_partei VARCHAR(10),
+  li_p_partei VARCHAR(10),
   li_position INT,
   li_nachname VARCHAR(30),
   li_vorname VARCHAR(30),
@@ -60,9 +60,9 @@ CREATE TABLE li_liste (
   li_beruf VARCHAR(30),
   li_plz SMALLINT,
   li_ort VARCHAR(30),
-  li_lpl INT,
-  li_rpl VARCHAR(2),
-  PRIMARY KEY (li_partei, li_position)
+  li_l_lpl INT,
+  li_r_rpl VARCHAR(2),
+  PRIMARY KEY (li_p_partei, li_position)
 );
 
 LOAD DATA LOCAL INFILE 'data/liste-spoe.csv'
@@ -135,7 +135,7 @@ LOAD DATA LOCAL INFILE 'data/liste-m.csv'
   INTO TABLE li_liste
     FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
     LINES TERMINATED BY '\r\n'
-    IGNORE 1 LINES
+    IGNORE 1 LINES;
 
 LOAD DATA LOCAL INFILE 'data/liste-euaus.csv'
   INTO TABLE li_liste
@@ -143,6 +143,33 @@ LOAD DATA LOCAL INFILE 'data/liste-euaus.csv'
     LINES TERMINATED BY '\r\n'
     IGNORE 1 LINES;
 
+ALTER TABLE s_stimmbezirke
+ ADD FOREIGN KEY (s_r_regionalwahlkreis)
+   REFERENCES r_regionalwahlkreise (r_wahlkreisnummer)
+   ON UPDATE RESTRICT
+   ON DELETE RESTRICT;
+
+ALTER TABLE p_parteien
+ ADD FOREIGN KEY (p_l_landeswahlkreis)
+   REFERENCES l_landeswahlkreise (l_wahlkreis)
+   ON UPDATE RESTRICT
+   ON DELETE RESTRICT;
+
+ALTER TABLE li_liste
+ ADD FOREIGN KEY (li_p_partei)
+   REFERENCES p_parteien (p_kurzbezeichnung)
+   ON UPDATE RESTRICT
+   ON DELETE RESTRICT,
+ ADD FOREIGN KEY (li_l_lpl)
+   REFERENCES l_landeswahlkreise (l_wahlkreis)
+   ON UPDATE RESTRICT
+   ON DELETE RESTRICT,
+ ADD FOREIGN KEY (li_r_rpl)
+   REFERENCES r_regionalwahlkreise (r_wahlkreisnummer)
+   ON UPDATE RESTRICT
+   ON DELETE RESTRICT;
+
 # example usage:
 SELECT li_partei, li_position, li_nachname, li_vorname
   FROM li_liste where li_position < 10;
+
