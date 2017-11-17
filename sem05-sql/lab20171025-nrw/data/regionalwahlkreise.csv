@@ -1,40 +1,40 @@
-Bezeichnung,Landeswahlkreisnummer/Buchstabe
-Burgenland Nord,1A
-Burgenland Süd,1B
-Klagenfurt,2A
-Villach,2B
-Kärnten West,2C
-Kärnten Ost,2D
-Weinviertel,3A
-Waldviertel,3B
-Mostviertel,3C
-Niederösterreich Mitte,3D
-Niederösterreich Süd,3E
-Thermenregion,3F
-Niederösterreich Ost,3G
-Linz und Umgebung,4A
-Innviertel,4B
-Hausruckviertel,4C
-Traunviertel,4D
-Mühlviertel,4E
-Salzburg Stadt,5A
-Flachgau/Tennengau,5B
-Lungau/Pinzgau/Pongau,5C
-Graz und Umgebung,6A
-Oststeiermark,6B
-Weststeiermark,6C
-Obersteiermark,6D
-Innsbruck,7A
-Innsbruck-Land,7B
-Unterland,7C
-Oberland,7D
-Osttirol,7E
-Vorarlberg Nord,8A
-Vorarlberg Süd,8B
-Wien Innen-Süd,9A
-Wien Innen-West,9B
-Wien Innen-Ost,9C
-Wien Süd,9D
-Wien Süd-West,9E
-Wien Nord-West,9F
-Wien Nord,9G
+Landeswahlkreisnummer/Buchstabe,Bezeichnung
+1A,Burgenland Nord
+1B,Burgenland Süd
+2A,Klagenfurt
+2B,Villach
+2C,Kärnten West
+2D,Kärnten Ost
+3A,Weinviertel
+3B,Waldviertel
+3C,Mostviertel
+3D,Niederösterreich Mitte
+3E,Niederösterreich Süd
+3F,Thermenregion
+3G,Niederösterreich Ost
+4A,Linz und Umgebung
+4B,Innviertel
+4C,Hausruckviertel
+4D,Traunviertel
+4E,Mühlviertel
+5A,Salzburg Stadt
+5B,Flachgau/Tennengau
+5C,Lungau/Pinzgau/Pongau
+6A,Graz und Umgebung
+6B,Oststeiermark
+6C,Weststeiermark
+6D,Obersteiermark
+7A,Innsbruck
+7B,Innsbruck-Land
+7C,Unterland
+7D,Oberland
+7E,Osttirol
+8A,Vorarlberg Nord
+8B,Vorarlberg Süd
+9A,Wien Innen-Süd
+9B,Wien Innen-West
+9C,Wien Innen-Ost
+9D,Wien Süd
+9E,Wien Süd-West
+9F,Wien Nord-West
+9G,Wien Nord

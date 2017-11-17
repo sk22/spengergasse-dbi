@@ -14,9 +14,8 @@ LOAD DATA LOCAL INFILE 'data/stimmbezirke.csv' INTO TABLE s_stimmbezirke
   IGNORE 1 LINES;
 
 CREATE TABLE l_landeswahlkreise (
-  l_bundesland VARCHAR(16),
-  l_wahlkreis INT,
-  PRIMARY KEY (l_wahlkreis)
+  l_wahlkreis INT PRIMARY KEY,
+  l_bundesland VARCHAR(16)
 );
 
 LOAD DATA LOCAL INFILE 'data/landeswahlkreise.csv'
@@ -26,9 +25,8 @@ LOAD DATA LOCAL INFILE 'data/landeswahlkreise.csv'
     IGNORE 1 LINES;
 
 CREATE TABLE r_regionalwahlkreise (
-  r_bezeichnung VARCHAR(25),
-  r_wahlkreisnummer VARCHAR(2),
-  PRIMARY KEY (r_wahlkreisnummer)
+  r_wahlkreisnummer VARCHAR(2) PRIMARY KEY,
+  r_bezeichnung VARCHAR(25)
 );
 
 LOAD DATA LOCAL INFILE 'data/regionalwahlkreise.csv'
@@ -38,9 +36,9 @@ LOAD DATA LOCAL INFILE 'data/regionalwahlkreise.csv'
     IGNORE 1 LINES;
 
 CREATE TABLE p_parteien (
-  p_partei VARCHAR(120),
   p_kurzbezeichnung VARCHAR(10),
   p_l_landeswahlkreis INT,
+  p_partei VARCHAR(120),
   PRIMARY KEY (p_kurzbezeichnung, p_l_landeswahlkreis)
 );
 
