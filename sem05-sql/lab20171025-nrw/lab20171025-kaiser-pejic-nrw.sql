@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS 20171025PejicKaiserNRW;
-CREATE DATABASE 20171025PejicKaiserNRW DEFAULT CHARACTER SET utf8;
-USE 20171025PejicKaiserNRW;
+DROP DATABASE IF EXISTS 20171025KaiserPejicNRW;
+CREATE DATABASE 20171025KaiserPejicNRW DEFAULT CHARACTER SET utf8;
+USE 20171025KaiserPejicNRW;
 
 CREATE TABLE s_stimmbezirke (
   s_name VARCHAR(30) PRIMARY KEY,
@@ -169,7 +169,7 @@ ALTER TABLE li_liste
    ON UPDATE RESTRICT
    ON DELETE RESTRICT;
 
-# example usage:
-SELECT li_partei, li_position, li_nachname, li_vorname
+-- example usage:
+SELECT li_p_partei, li_position, li_nachname, li_vorname
   FROM li_liste where li_position < 10;
 
