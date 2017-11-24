@@ -5,6 +5,7 @@ USE 20171025KaiserPejicNRW;
 CREATE TABLE s_stimmbezirke (
   s_name VARCHAR(30) PRIMARY KEY,
   s_r_regionalwahlkreis VARCHAR(2),
+  s_l_landeswahlkreis INT,
   s_art VARCHAR(20)
 ) ENGINE = InnoDB;
 
@@ -143,6 +144,10 @@ LOAD DATA LOCAL INFILE 'data/liste-euaus.csv'
 ALTER TABLE s_stimmbezirke
  ADD FOREIGN KEY (s_r_regionalwahlkreis)
    REFERENCES r_regionalwahlkreise (r_wahlkreisnummer)
+   ON UPDATE RESTRICT
+   ON DELETE RESTRICT,
+ ADD FOREIGN KEY (s_l_landeswahlkreis)
+   REFERENCES l_landeswahlkreise (l_wahlkreis)
    ON UPDATE RESTRICT
    ON DELETE RESTRICT;
 
