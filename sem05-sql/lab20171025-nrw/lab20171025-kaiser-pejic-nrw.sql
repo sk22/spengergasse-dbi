@@ -26,7 +26,8 @@ LOAD DATA LOCAL INFILE 'data/landeswahlkreise.csv'
 
 CREATE TABLE r_regionalwahlkreise (
   r_wahlkreisnummer VARCHAR(2) PRIMARY KEY,
-  r_bezeichnung VARCHAR(25)
+  r_bezeichnung VARCHAR(25),
+  r_l_landeswahlkreis INT
 );
 
 LOAD DATA LOCAL INFILE 'data/regionalwahlkreise.csv'
@@ -147,6 +148,12 @@ ALTER TABLE s_stimmbezirke
    ON UPDATE RESTRICT
    ON DELETE RESTRICT;
 
+ALTER TABLE r_regionalwahlkreise
+  ADD FOREIGN KEY (r_l_landeswahlkreis)
+    REFERENCES l_landeswahlkreise (l_wahlkreis)
+    ON UPDATE RESTRICT
+    ON DELETE RESTRICT;
+
 ALTER TABLE p_parteien
  ADD FOREIGN KEY (p_l_landeswahlkreis)
    REFERENCES l_landeswahlkreise (l_wahlkreis)
@@ -166,6 +173,7 @@ ALTER TABLE li_liste
    REFERENCES r_regionalwahlkreise (r_wahlkreisnummer)
    ON UPDATE RESTRICT
    ON DELETE RESTRICT;
+
 
 -- example usage:
 SELECT li_p_partei, li_position, li_nachname, li_vorname

@@ -1,40 +1,40 @@
-Landeswahlkreisnummer/Buchstabe,Bezeichnung
-1A,Burgenland Nord
-1B,Burgenland Süd
-2A,Klagenfurt
-2B,Villach
-2C,Kärnten West
-2D,Kärnten Ost
-3A,Weinviertel
-3B,Waldviertel
-3C,Mostviertel
-3D,Niederösterreich Mitte
-3E,Niederösterreich Süd
-3F,Thermenregion
-3G,Niederösterreich Ost
-4A,Linz und Umgebung
-4B,Innviertel
-4C,Hausruckviertel
-4D,Traunviertel
-4E,Mühlviertel
-5A,Salzburg Stadt
-5B,Flachgau/Tennengau
-5C,Lungau/Pinzgau/Pongau
-6A,Graz und Umgebung
-6B,Oststeiermark
-6C,Weststeiermark
-6D,Obersteiermark
-7A,Innsbruck
-7B,Innsbruck-Land
-7C,Unterland
-7D,Oberland
-7E,Osttirol
-8A,Vorarlberg Nord
-8B,Vorarlberg Süd
-9A,Wien Innen-Süd
-9B,Wien Innen-West
-9C,Wien Innen-Ost
-9D,Wien Süd
-9E,Wien Süd-West
-9F,Wien Nord-West
-9G,Wien Nord
+Landeswahlkreisnummer/Buchstabe,Bezeichnung,Landeswahlkreis
+1A,Burgenland Nord,1
+1B,Burgenland Süd,1
+2A,Klagenfurt,2
+2B,Villach,2
+2C,Kärnten West,2
+2D,Kärnten Ost,2
+3A,Weinviertel,3
+3B,Waldviertel,3
+3C,Mostviertel,3
+3D,Niederösterreich Mitte,3
+3E,Niederösterreich Süd,3
+3F,Thermenregion,3
+3G,Niederösterreich Ost,3
+4A,Linz und Umgebung,4
+4B,Innviertel,4
+4C,Hausruckviertel,4
+4D,Traunviertel,4
+4E,Mühlviertel,4
+5A,Salzburg Stadt,5
+5B,Flachgau/Tennengau,5
+5C,Lungau/Pinzgau/Pongau,5
+6A,Graz und Umgebung,6
+6B,Oststeiermark,6
+6C,Weststeiermark,6
+6D,Obersteiermark,6
+7A,Innsbruck,7
+7B,Innsbruck-Land,7
+7C,Unterland,7
+7D,Oberland,7
+7E,Osttirol,7
+8A,Vorarlberg Nord,8
+8B,Vorarlberg Süd,8
+9A,Wien Innen-Süd,9
+9B,Wien Innen-West,9
+9C,Wien Innen-Ost,9
+9D,Wien Süd,9
+9E,Wien Süd-West,9
+9F,Wien Nord-West,9
+9G,Wien Nord,9
