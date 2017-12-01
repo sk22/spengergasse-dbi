@@ -17,7 +17,7 @@ LOAD DATA LOCAL INFILE 'data/stimmbezirke.csv' INTO TABLE s_stimmbezirke
 CREATE TABLE l_landeswahlkreise (
   l_wahlkreis INT PRIMARY KEY,
   l_bundesland VARCHAR(16)
-);
+) ENGINE = InnoDB;
 
 LOAD DATA LOCAL INFILE 'data/landeswahlkreise.csv'
   INTO TABLE l_landeswahlkreise
@@ -29,7 +29,7 @@ CREATE TABLE r_regionalwahlkreise (
   r_wahlkreisnummer VARCHAR(2) PRIMARY KEY,
   r_bezeichnung VARCHAR(25),
   r_l_landeswahlkreis INT
-);
+) ENGINE = InnoDB;
 
 LOAD DATA LOCAL INFILE 'data/regionalwahlkreise.csv'
   INTO TABLE r_regionalwahlkreise
@@ -40,7 +40,7 @@ LOAD DATA LOCAL INFILE 'data/regionalwahlkreise.csv'
 CREATE TABLE p_parteien (
   p_kurzbezeichnung VARCHAR(10) PRIMARY KEY,
   p_partei VARCHAR(120)
-);
+) ENGINE = InnoDB;
 
 LOAD DATA LOCAL INFILE 'data/parteien.csv'
   INTO TABLE p_parteien
@@ -61,7 +61,7 @@ CREATE TABLE li_liste (
   li_l_lpl INT,
   li_r_rpl VARCHAR(2),
   PRIMARY KEY (li_p_partei, li_position)
-);
+) ENGINE = InnoDB;
 
 LOAD DATA LOCAL INFILE 'data/liste-spoe.csv'
   INTO TABLE li_liste
