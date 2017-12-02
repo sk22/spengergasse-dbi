@@ -1,3 +1,6 @@
+-- Task "Abfragen SQL Firmenmodell" by Samuel Kaiser
+-- December 2, 2017
+
 USE companydb;
 
 -- Task 1
