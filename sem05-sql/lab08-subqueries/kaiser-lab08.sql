@@ -2,8 +2,8 @@ USE companydb;
 
 -- Task 1
 
-SELECT e_empno, e_ename, e_job, e_sal FROM e_emp
-WHERE e_job = (SELECT e_job FROM e_emp WHERE e_ename = "allen");
+SELECT e_empno, e_ename, e_d_deptno, e_sal FROM e_emp
+WHERE e_d_deptno = (SELECT e_d_deptno FROM e_emp WHERE e_ename = "allen");
 
 -- Task 2
 
@@ -33,8 +33,9 @@ WHERE e_hiredate < (
 
 -- Task 4
 
-SELECT e_empno, e_ename, e_job, e_sal FROM e_emp
-WHERE e_job = (SELECT e_job FROM e_emp WHERE e_ename = "allen");
+SELECT e_empno, e_ename, e_job, e_e_mgr, e_sal FROM e_emp
+WHERE e_job = (SELECT e_job FROM e_emp WHERE e_ename = "allen")
+  AND e_e_mgr = (SELECT e_e_mgr FROM e_emp WHERE e_ename = "allen");
 
 -- Task 5
 
