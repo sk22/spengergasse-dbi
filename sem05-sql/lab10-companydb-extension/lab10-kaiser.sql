@@ -7,12 +7,20 @@ USE companydb_new;
 CREATE TABLE d_dept
   SELECT * FROM companydb.d_dept;
 
+ALTER TABLE d_dept
+  ADD PRIMARY KEY (d_deptno);
+
 CREATE TABLE e_emp
   SELECT * FROM companydb.e_emp;
+
+ALTER TABLE e_emp
+  ADD PRIMARY KEY (e_empno);
 
 CREATE TABLE s_salgrade
   SELECT * FROM companydb.s_salgrade;
 
+ALTER TABLE s_salgrade
+  ADD PRIMARY KEY (s_grade);
 
 -- 2. Create projects table
 
@@ -49,9 +57,15 @@ UPDATE e_emp SET e_p_projno = 103
   WHERE e_empno IN (7499, 7521, 7654);
 
 
--- 6. Add foreign key
+-- 6. Add foreign keys
 
 ALTER TABLE e_emp
+  ADD FOREIGN KEY (e_e_mgr) REFERENCES e_emp(e_empno)
+    ON UPDATE CASCADE
+    ON DELETE RESTRICT,
   ADD FOREIGN KEY (e_p_projno) REFERENCES p_projects(p_projno)
     ON UPDATE CASCADE
-    ON DELETE SET NULL;
+    ON DELETE SET NULL,
+  ADD FOREIGN KEY (e_d_deptno) REFERENCES d_dept(d_deptno)
+    ON UPDATE CASCADE
+    ON DELETE RESTRICT;
