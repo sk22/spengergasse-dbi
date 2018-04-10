@@ -29,4 +29,16 @@ SELECT DISTINCT p_leagueno FROM players_league_view;
 
 -- Task 5
 
+DROP VIEW IF EXISTS stratford_players_info_view;
+
+CREATE VIEW stratford_players_info_view AS
+SELECT p_playerno, 
+
+-- Task 6
+
+DROP VIEW IF EXISTS players_in_towns_view;
+
+CREATE VIEW players_in_towns_view (t_town, t_players) AS
+SELECT p_town, count(p_playerno);
+
 
