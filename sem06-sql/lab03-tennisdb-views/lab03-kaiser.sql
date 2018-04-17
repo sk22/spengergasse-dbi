@@ -57,6 +57,8 @@ WHERE p_year_of_birth < 1950;
 UPDATE p_players SET p_year_of_birth = 1960
 WHERE p_playerno = 2;
 
+-- checks if player 2 is still in players_born_before_1950_view
+
 SELECT
   2 IN (SELECT p_playerno FROM players_born_before_1950_view)
     AS player_2_is_still_in_view;
