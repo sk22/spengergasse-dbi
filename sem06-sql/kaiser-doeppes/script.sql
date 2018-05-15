@@ -16,3 +16,9 @@ WHERE a_avail_balance < (
 );
 
 # Task 2
+
+SELECT * FROM c_customers
+WHERE (
+  SELECT count(a_account_nr) FROM a_accounts
+  WHERE a_c_cust_nr = c_cust_nr
+) = 2;
