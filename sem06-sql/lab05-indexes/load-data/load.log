@@ -1,0 +1,257 @@
+--------------
+SET profiling = 1
+--------------
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+--------------
+SET FOREIGN_KEY_CHECKS = 0
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+SELECT 21000 AS Records, 1000 AS Klassen, 3420000 AS Schueler, NOW() AS Date
+--------------
+
++---------+---------+----------+---------------------+
+| Records | Klassen | Schueler | Date                |
++---------+---------+----------+---------------------+
+|   21000 |    1000 |  3420000 | 2018-06-13 09:50:39 |
++---------+---------+----------+---------------------+
+1 row in set (0.00 sec)
+
+--------------
+RENAME TABLE k_klassen TO k1
+--------------
+
+Query OK, 0 rows affected (0.07 sec)
+
+--------------
+RENAME TABLE s_schueler TO s1
+--------------
+
+Query OK, 0 rows affected (0.03 sec)
+
+--------------
+CREATE TABLE k_klassen LIKE k1
+--------------
+
+Query OK, 0 rows affected (0.07 sec)
+
+--------------
+CREATE TABLE s_schueler LIKE s1
+--------------
+
+Query OK, 0 rows affected (0.09 sec)
+
+--------------
+DROP TABLE k1
+--------------
+
+Query OK, 0 rows affected (0.04 sec)
+
+--------------
+DROP TABLE s1
+--------------
+
+Query OK, 0 rows affected (0.02 sec)
+
+--------------
+LOAD DATA LOCAL INFILE 'klassen-1000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'
+--------------
+
+Query OK, 1000 rows affected (0.02 sec)
+Records: 1000  Deleted: 0  Skipped: 0  Warnings: 0
+
+--------------
+LOAD DATA LOCAL INFILE 'schueler-1000-20000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'
+--------------
+
+Query OK, 20000 rows affected, 20000 warnings (0.47 sec)
+Records: 20000  Deleted: 0  Skipped: 0  Warnings: 20000
+
+--------------
+SELECT 210000 AS Records, 10000 AS Klassen, 200000 AS Schueler, NOW() AS Date
+--------------
+
++---------+---------+----------+---------------------+
+| Records | Klassen | Schueler | Date                |
++---------+---------+----------+---------------------+
+|  210000 |   10000 |   200000 | 2018-06-13 09:50:40 |
++---------+---------+----------+---------------------+
+1 row in set (0.00 sec)
+
+--------------
+RENAME TABLE k_klassen TO k1
+--------------
+
+Query OK, 0 rows affected (0.03 sec)
+
+--------------
+RENAME TABLE s_schueler TO s1
+--------------
+
+Query OK, 0 rows affected (0.06 sec)
+
+--------------
+CREATE TABLE k_klassen LIKE k1
+--------------
+
+Query OK, 0 rows affected (0.09 sec)
+
+--------------
+CREATE TABLE s_schueler LIKE s1
+--------------
+
+Query OK, 0 rows affected (0.07 sec)
+
+--------------
+DROP TABLE k1
+--------------
+
+Query OK, 0 rows affected (0.02 sec)
+
+--------------
+DROP TABLE s1
+--------------
+
+Query OK, 0 rows affected (0.02 sec)
+
+--------------
+LOAD DATA LOCAL INFILE 'klassen-10000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'
+--------------
+
+Query OK, 10000 rows affected (0.23 sec)
+Records: 10000  Deleted: 0  Skipped: 0  Warnings: 0
+
+--------------
+LOAD DATA LOCAL INFILE 'schueler-10000-200000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'
+--------------
+
+Query OK, 200000 rows affected, 65535 warnings (23.36 sec)
+Records: 200000  Deleted: 0  Skipped: 0  Warnings: 200000
+
+--------------
+SELECT 87880 + 1757600 AS Records, 87880 AS Klassen, 1757600 AS Schueler, NOW() AS Date
+--------------
+
++---------+---------+----------+---------------------+
+| Records | Klassen | Schueler | Date                |
++---------+---------+----------+---------------------+
+| 1845480 |   87880 |  1757600 | 2018-06-13 09:51:04 |
++---------+---------+----------+---------------------+
+1 row in set (0.00 sec)
+
+--------------
+RENAME TABLE k_klassen TO k1
+--------------
+
+Query OK, 0 rows affected (0.04 sec)
+
+--------------
+RENAME TABLE s_schueler TO s1
+--------------
+
+Query OK, 0 rows affected (0.03 sec)
+
+--------------
+CREATE TABLE k_klassen LIKE k1
+--------------
+
+Query OK, 0 rows affected (0.10 sec)
+
+--------------
+CREATE TABLE s_schueler LIKE s1
+--------------
+
+Query OK, 0 rows affected (0.07 sec)
+
+--------------
+DROP TABLE k1
+--------------
+
+Query OK, 0 rows affected (0.02 sec)
+
+--------------
+DROP TABLE s1
+--------------
+
+Query OK, 0 rows affected (0.02 sec)
+
+--------------
+LOAD DATA LOCAL INFILE 'klassen-100000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'
+--------------
+
+Query OK, 87880 rows affected (1.16 sec)
+Records: 87880  Deleted: 0  Skipped: 0  Warnings: 0
+
+--------------
+LOAD DATA LOCAL INFILE 'schueler-100000-2000000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'
+--------------
+
+Query OK, 1757600 rows affected, 65535 warnings (26 min 9.46 sec)
+Records: 1757600  Deleted: 0  Skipped: 0  Warnings: 1757599
+
+--------------
+SET FOREIGN_KEY_CHECKS = 1
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+SHOW profiles
+--------------
+
++----------+---------------+--------------------------------------------------------------------------------------------------------------------------+
+| Query_ID | Duration      | Query                                                                                                                    |
++----------+---------------+--------------------------------------------------------------------------------------------------------------------------+
+|       15 |    0.07394375 | CREATE TABLE s_schueler LIKE s1                                                                                          |
+|       16 |    0.02175675 | DROP TABLE k1                                                                                                            |
+|       17 |    0.02317975 | DROP TABLE s1                                                                                                            |
+|       18 |    0.23163750 | LOAD DATA LOCAL INFILE 'klassen-10000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'           |
+|       19 |   23.36465450 | LOAD DATA LOCAL INFILE 'schueler-10000-200000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'   |
+|       20 |    0.00030200 | SELECT 87880 + 1757600 AS Records, 87880 AS Klassen, 1757600 AS Schueler, NOW() AS Date                                  |
+|       21 |    0.04021000 | RENAME TABLE k_klassen TO k1                                                                                             |
+|       22 |    0.03647725 | RENAME TABLE s_schueler TO s1                                                                                            |
+|       23 |    0.09761925 | CREATE TABLE k_klassen LIKE k1                                                                                           |
+|       24 |    0.07107625 | CREATE TABLE s_schueler LIKE s1                                                                                          |
+|       25 |    0.02542525 | DROP TABLE k1                                                                                                            |
+|       26 |    0.02625525 | DROP TABLE s1                                                                                                            |
+|       27 |    1.16455925 | LOAD DATA LOCAL INFILE 'klassen-100000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"'          |
+|       28 | 1569.46450725 | LOAD DATA LOCAL INFILE 'schueler-100000-2000000.csv'
+  INTO TABLE k_klassen
+  FIELDS TERMINATED BY ','
+  ENCLOSED BY '"' |
+|       29 |    0.00048650 | SET FOREIGN_KEY_CHECKS = 1                                                                                               |
++----------+---------------+--------------------------------------------------------------------------------------------------------------------------+
+15 rows in set, 1 warning (0.00 sec)
+
+Bye
